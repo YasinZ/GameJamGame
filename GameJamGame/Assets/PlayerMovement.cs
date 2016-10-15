@@ -3,8 +3,12 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
 
+    [HideInInspector]
+    public bool facingRight = true;
+
     public float speed = 2;
     private Rigidbody2D rigid;
+
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +26,17 @@ public class PlayerMovement : MonoBehaviour {
 
         rigid.velocity = v2;
 
-        if(Input.GetKeyDown(KeyCode.Space) && Grounded) 
+        // If the input is moving the player right and the player is facing left...
+        if (inputX > 0 && !facingRight)
+            // ... flip the player.
+            Flip();
+
+        // Otherwise if the input is moving the player left and the player is facing right...
+        else if (inputX < 0 && facingRight)
+            // ... flip the player.
+            Flip();
+
+        if (Input.GetKeyDown(KeyCode.Space) && Grounded) 
         {
             v2.y = 10;
             rigid.velocity = v2;
@@ -56,4 +70,14 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
+    void Flip()
+    {
+        // Switch the way the player is labelled as facing.
+        facingRight = !facingRight;
+
+        // Multiply the player's x local scale by -1.
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
 }

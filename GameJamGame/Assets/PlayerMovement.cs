@@ -16,19 +16,17 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
         float inputX = Input.GetAxis("Horizontal");
-        float inputY = Input.GetAxis("Vertical");
 
-        Vector3 v3 = new Vector3(inputX * speed, rigid.velocity.y, 0);
+        Vector2 v2 = new Vector2(inputX * speed, rigid.velocity.y);
 
-        rigid.velocity = v3;
+        rigid.velocity = v2;
 
         if(Input.GetKeyDown(KeyCode.Space) ) 
         {
-            v3.y = 5;
-            rigid.velocity = v3;
-
+            v2.y = 5;
+            rigid.velocity = v2;
+            
         }
 
 

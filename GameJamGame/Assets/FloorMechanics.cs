@@ -16,13 +16,12 @@ public class FloorMechanics : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D c1)
     {
-        GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1f);
+        if (!c1.gameObject.name.Equals("player"))
+        {
+            GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1f);
+        }
     }
 
-    void PolygonColliderExit2D(Collider2D c1)
-    {
-        GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1f);
-    }
 
     void OnTriggerExit2D(Collider2D c1)
     {

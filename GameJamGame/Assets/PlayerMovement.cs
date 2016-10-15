@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour {
 
     public float speed = 10;
     private Rigidbody2D rigid;
@@ -23,6 +23,14 @@ public class NewBehaviourScript : MonoBehaviour {
         Vector3 v3 = new Vector3(inputX * speed, rigid.velocity.y, 0);
 
         rigid.velocity = v3;
+
+        if(Input.GetKeyDown(KeyCode.Space) ) 
+        {
+            v3.y = 5;
+            rigid.velocity = v3;
+
+        }
+
 
 	}
 }

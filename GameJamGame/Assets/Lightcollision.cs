@@ -8,8 +8,8 @@ public class Lightcollision : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Sprite Light = new Sprite();
-        Debug.Log(Light.associatedAlphaSplitTexture);
+        //Sprite Light = new Sprite();
+        //Debug.Log(Light.associatedAlphaSplitTexture);
     }
 
     // Update is called once per frame
@@ -19,6 +19,11 @@ public class Lightcollision : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D c1)
     {
+        if (c1.gameObject.name.Equals("player"))
+        {
+            SceneManager.LoadScene("new scene");
+        }
+       
         //GetComponent<Renderer>().material.color += new Color(0, 0, 0, 1f);
     }
 }

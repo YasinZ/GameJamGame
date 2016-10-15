@@ -18,7 +18,7 @@ public class BoxToHit : MonoBehaviour {
     // Instant reset when object touches wall.
     void OnCollisionEnter2D(Collision2D c1)
     {
-        SceneManager.LoadScene("New scene");
+        SceneManager.LoadScene("new scene");
     }
 
     // Possible use later for polishing

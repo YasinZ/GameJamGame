@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
 
-    public float speed = 10;
+    public float speed = 2;
     private Rigidbody2D rigid;
 
 	// Use this for initialization
@@ -26,9 +26,6 @@ public class PlayerMovement : MonoBehaviour {
         {
             v2.y = 5;
             rigid.velocity = v2;
-            
         }
-
-
 	}
 }

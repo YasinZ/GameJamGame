@@ -15,23 +15,17 @@ public class BoxToHit : MonoBehaviour {
 	
 	}
 
+    // Instant reset when object touches wall.
     void OnCollisionEnter2D(Collision2D c1)
     {
-        Debug.Log("KAPPA");
+        SceneManager.LoadScene("new scene");
+    }
 
-
-             SceneManager.LoadScene("new scene");
-        }
-
+    // Possible use later for polishing
     //void OnTriggerEnter2D(Collider2D c1) {
-
-
     //    for (int i = 0; i < 100000000; i++)
     //    { }
-
-
     //    SceneManager.LoadScene("New scene");
     //}
-
     //ontriggerenter2d
 }

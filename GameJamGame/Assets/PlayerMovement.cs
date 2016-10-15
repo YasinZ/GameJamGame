@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour {
 
         if(Input.GetKeyDown(KeyCode.Space) && Grounded) 
         {
-            v2.y = 5;
+            v2.y = 10;
             rigid.velocity = v2;
         }
 	}

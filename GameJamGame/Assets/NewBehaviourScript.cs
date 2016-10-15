@@ -3,10 +3,13 @@ using System.Collections;
 
 public class NewBehaviourScript : MonoBehaviour {
 
-    public float speed;
+    public float speed = 10;
+    private Rigidbody2D rigid;
 
 	// Use this for initialization
 	void Start () {
+
+        rigid = GetComponent<Rigidbody2D>();
 	    
 	}
 	
@@ -17,9 +20,9 @@ public class NewBehaviourScript : MonoBehaviour {
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
 
-        Vector3 v3 = new Vector3(inputX, inputY, 0);
+        Vector3 v3 = new Vector3(inputX * speed, rigid.velocity.y, 0);
 
-        transform.Translate(v3 * speed * Time.deltaTime);
+        rigid.velocity = v3;
 
 	}
 }

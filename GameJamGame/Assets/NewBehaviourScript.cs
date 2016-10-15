@@ -3,6 +3,8 @@ using System.Collections;
 
 public class NewBehaviourScript : MonoBehaviour {
 
+    public float speed;
+
 	// Use this for initialization
 	void Start () {
 	    
@@ -12,10 +14,12 @@ public class NewBehaviourScript : MonoBehaviour {
 	void Update () {
 
 
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            transform.Translate(Vector3.forward * Time.deltaTime);
-            transform.Translate(Vector3.up * Time.deltaTime, Space.World);
-        }
+        float inputX = Input.GetAxis("Horizontal");
+        float inputY = Input.GetAxis("Vertical");
+
+        Vector3 v3 = new Vector3(inputX, inputY, 0);
+
+        transform.Translate(v3 * speed * Time.deltaTime);
+
 	}
 }

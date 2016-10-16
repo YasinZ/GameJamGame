@@ -2,10 +2,13 @@
 using System.Collections;
 
 public class FloorMechanics : MonoBehaviour {
+    Color prevColor;
 
-	// Use this for initialization
-	void Start () {
-        GetComponent<Renderer>().material.color = new Color(0, 0, 0, -1f);
+    // Use this for initialization
+    void Start () {
+        prevColor = GetComponent<Renderer>().material.color;
+
+        GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0);
     }
 
     // Update is called once per frame
@@ -18,7 +21,8 @@ public class FloorMechanics : MonoBehaviour {
     {
         if (!c1.gameObject.name.Equals("player"))
         {
-            GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1f);
+            //GetComponent<Renderer>().material.color = new Color(0, 0, 0, 1f)
+            GetComponent<Renderer>().material.color = prevColor;
         }
     }
 
@@ -27,8 +31,10 @@ public class FloorMechanics : MonoBehaviour {
     {
         if (!c1.gameObject.name.Equals("player"))
         {
-            GetComponent<Renderer>().material.color = new Color(0, 0, 0, -1f);
+            //GetComponent<Renderer>().material.color = prevColor;
             //GetComponent<Collider2D>().isTrigger = false;
+            GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0);
+
         }
     }
 }

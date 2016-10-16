@@ -260,7 +260,6 @@ GameObject:
   - 4: {fileID: 922048003}
   - 212: {fileID: 922048002}
   - 95: {fileID: 922048001}
-  - 114: {fileID: 922048004}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Untagged
@@ -331,17 +330,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!114 &922048004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 922048000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 749cb38ad288338428d0348ca65b693c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &979247695
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,7 +510,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: b68891c330d3dfb41a759f1162d4737c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1

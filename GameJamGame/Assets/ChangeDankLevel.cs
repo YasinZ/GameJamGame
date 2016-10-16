@@ -13,10 +13,10 @@ public class ChangeDankLevel : MonoBehaviour {
 	void Update () {
 
 	}
-
 	// Instant reset when object touches wall.
 	void OnCollisionEnter2D(Collision2D c1)
 	{
-		SceneManager.LoadScene("Meme");
-	}	
+		SceneManager.LoadScene("Much meme such dank");
+	}
+	
 }

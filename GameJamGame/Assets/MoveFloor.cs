@@ -14,7 +14,7 @@ public class MoveFloor : MonoBehaviour {
         StartX = x; 
         left = false;
     }
-
+    //this is a comment
     // Update is called once per frame
     void Update()
     {

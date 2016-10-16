@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
 
     [HideInInspector]
     public bool facingRight = true;
@@ -10,15 +11,17 @@ public class PlayerMovement : MonoBehaviour {
     private Rigidbody2D rigid;
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
 
         rigid = GetComponent<Rigidbody2D>();
-	    
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
 
         float inputX = Input.GetAxis("Horizontal");
 
@@ -36,12 +39,12 @@ public class PlayerMovement : MonoBehaviour {
             // ... flip the player.
             Flip();
 
-        if (Input.GetKeyDown(KeyCode.Space) && Grounded) 
+        if (Input.GetKeyDown(KeyCode.Space) && Grounded)
         {
             v2.y = 10;
             rigid.velocity = v2;
         }
-	}
+    }
 
     bool Grounded;
 
@@ -79,5 +82,25 @@ public class PlayerMovement : MonoBehaviour {
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+
+    void OnTriggerStay2D(Collider2D c1)
+    {
+
+        if (c1.gameObject.tag == "platform")
+        {
+            transform.parent = c1.transform;
+
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D c1)
+    {
+        if (c1.gameObject.tag == "platform")
+        {
+            transform.parent = null;
+
+        }
     }
 }

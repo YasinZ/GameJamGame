@@ -234,6 +234,10 @@ Prefab:
       propertyPath: m_Name
       value: Invis floor
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011243365664, guid: 684f7efe2a9d5b2468f4a45bf84f1669, type: 2}
+      propertyPath: m_TagString
+      value: platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 684f7efe2a9d5b2468f4a45bf84f1669, type: 2}
   m_IsPrefabParent: 0
@@ -333,7 +337,7 @@ GameObject:
   - 114: {fileID: 925805856}
   m_Layer: 0
   m_Name: Ground 1
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -562,7 +566,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.932789
+  orthographic size: 13.629412
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -688,11 +692,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 2070690756}
   - 212: {fileID: 2070690755}
-  - 114: {fileID: 2070690757}
   - 60: {fileID: 2070690754}
-  - 114: {fileID: 2070690758}
   - 50: {fileID: 2070690760}
-  - 114: {fileID: 2070690761}
+  - 114: {fileID: 2070690759}
   m_Layer: 0
   m_Name: Basic Light
   m_TagString: Untagged
@@ -760,13 +762,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2070690753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.53, y: 3.04, z: 0}
+  m_LocalPosition: {x: 5.45, y: 3.6, z: 0}
   m_LocalScale: {x: 3.5, y: 7.5, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
---- !u!114 &2070690757
+--- !u!114 &2070690759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -774,18 +776,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2070690753}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8badbbd1f806b5b43ad693cc0a27ed99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2070690758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2070690753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4e13689ec6b8e043abea96561c1787b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9800731a2eb74f4e965263c5e924286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!50 &2070690760
@@ -805,14 +796,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2070690761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2070690753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6e50e28a1650054490e59ce8652e932, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -600,7 +600,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   facingRight: 1
+<<<<<<< HEAD
   speed: 8
+=======
+  speed: 7
+>>>>>>> origin/master
 --- !u!61 &354718650
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1367,7 +1371,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 841000408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c79915723c61c3e45bd12471e8d8561b, type: 3}
+  m_Script: {fileID: 11500000, guid: 8badbbd1f806b5b43ad693cc0a27ed99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &850070762
@@ -1556,9 +1560,16 @@ Prefab:
       propertyPath: m_Name
       value: Kill Zone
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 4000011539543678, guid: 684f7efe2a9d5b2468f4a45bf84f1669, type: 2}
       propertyPath: m_LocalScale.y
       value: 0.01
+=======
+    - target: {fileID: 61000013911690386, guid: 684f7efe2a9d5b2468f4a45bf84f1669,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+>>>>>>> origin/master
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 684f7efe2a9d5b2468f4a45bf84f1669, type: 2}
@@ -2401,6 +2412,7 @@ GameObject:
   - 60: {fileID: 1557549356}
   - 50: {fileID: 1557549358}
   - 114: {fileID: 1557549353}
+  - 114: {fileID: 1557549357}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -2482,6 +2494,17 @@ PolygonCollider2D:
     - - {x: -0.43301272, y: -0.74999994}
       - {x: 0.43301272, y: -0.75}
       - {x: 0, y: 0}
+--- !u!114 &1557549357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1557549352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8badbbd1f806b5b43ad693cc0a27ed99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &1557549358
 Rigidbody2D:
   serializedVersion: 2

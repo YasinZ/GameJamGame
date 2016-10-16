@@ -13,7 +13,6 @@ public class RotateBeginLight : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("est" + x);
 
         if (x < 115 && goingUp)
         {

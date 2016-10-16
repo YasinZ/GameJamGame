@@ -16,7 +16,7 @@ public class IntroKillZone : MonoBehaviour {
 	}
 
     // Instant reset when object touches wall.
-    void OnTriggerEnter2D(Collider2D c1)
+    void OnTriggerEnter2D(Collision2D c1)
     {
         if (c1.gameObject.name.Equals("player"))
         {

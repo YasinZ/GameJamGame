@@ -11,7 +11,7 @@ public class Rotate : MonoBehaviour {
     float x;
 	// Update is called once per frame
 	void Update () {
-        x += Time.deltaTime * 50;
+        x += Time.deltaTime * 25;
 
         transform.rotation = Quaternion.Euler(0, 0, x);
     }

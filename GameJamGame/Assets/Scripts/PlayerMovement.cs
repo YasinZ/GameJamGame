@@ -3,12 +3,7 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Animator animator;
 
-    const int STATE_IDLE = 0;
-    const int STATE_WALK = 1;
-    const int STATE_JUMP = 2;
-    int _currentAnimationState = STATE_IDLE;
     [HideInInspector]
     public bool facingRight = true;
 
@@ -19,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //animator = this.GetComponent<Animator>();
+
         rigid = GetComponent<Rigidbody2D>();
 
     }
@@ -36,29 +31,18 @@ public class PlayerMovement : MonoBehaviour
 
         // If the input is moving the player right and the player is facing left...
         if (inputX > 0 && !facingRight)
-        {
             // ... flip the player.
             Flip();
-           // changeState(STATE_WALK);
-        }
 
         // Otherwise if the input is moving the player left and the player is facing right...
         else if (inputX < 0 && facingRight)
-        {
             // ... flip the player.
             Flip();
-            //changeState(STATE_WALK);
-        }
 
         if (Input.GetKeyDown(KeyCode.Space) && Grounded)
         {
-            v2.y = 11;
+            v2.y = 10;
             rigid.velocity = v2;
-           // changeState(STATE_JUMP);
-        }
-        else
-        {
-            //changeState(STATE_IDLE);
         }
     }
 
@@ -118,28 +102,5 @@ public class PlayerMovement : MonoBehaviour
             transform.parent = null;
 
         }
-    }
-    void changeState(int state)
-    {
-
-        if (_currentAnimationState == state)
-            return;
-
-        switch (state)
-        {
-            case STATE_WALK:
-                animator.SetInteger("state", STATE_WALK);
-                break;
-
-            case STATE_JUMP:
-                animator.SetInteger("state", STATE_JUMP);
-                break;
-
-            case STATE_IDLE:
-                animator.SetInteger("state", STATE_IDLE);
-                break;
-        }
-
-        _currentAnimationState = state;
     }
 }

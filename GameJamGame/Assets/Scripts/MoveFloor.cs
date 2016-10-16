@@ -26,7 +26,7 @@ public class MoveFloor : MonoBehaviour {
         {
             x += .05F;
         }
-        if (transform.position.x >= StartX+20)
+        if (transform.position.x >= StartX+10)
         {
 
             left = true;

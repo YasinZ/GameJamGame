@@ -20,7 +20,7 @@ public class Lightcollision : MonoBehaviour
     {
         if (c1.gameObject.name.Equals("player"))
         {
-            SceneManager.LoadScene("new scene");
+            SceneManager.LoadScene("Introlevel");
         }
         //GetComponent<Renderer>().material.color += new Color(0, 0, 0, 1f);
     }

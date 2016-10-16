@@ -411,7 +411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   facingRight: 1
-  speed: 20
+  speed: 10
 --- !u!61 &354718650
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -437,7 +437,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -517,9 +517,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.17963824}
   serializedVersion: 2
-  m_Size: {x: 2.48, y: 0.6}
+  m_Size: {x: 2.48, y: 0.2407233}
 --- !u!1 &484466074
 GameObject:
   m_ObjectHideFlags: 0

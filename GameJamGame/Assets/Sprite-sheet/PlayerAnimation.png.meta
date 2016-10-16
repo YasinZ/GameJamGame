@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ee9702938939fa045b023fd1ce86e99a
-timeCreated: 1476581730
+timeCreated: 1476644228
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -73,10 +73,10 @@ TextureImporter:
       name: Idel_2
       rect:
         serializedVersion: 2
-        x: 246
+        x: 237
         y: 13
-        width: 180
-        height: 160
+        width: 189
+        height: 180
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

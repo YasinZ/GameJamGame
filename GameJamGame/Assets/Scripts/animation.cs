@@ -7,6 +7,7 @@ public class animation : MonoBehaviour
 
     const int STATE_IDLE = 0;
     const int STATE_WALK = 1;
+    const int STATE_JUMP = 2;
     int _currentAnimationState = STATE_IDLE;
     // Use this for initialization
     void Start()
@@ -22,12 +23,21 @@ public class animation : MonoBehaviour
 
     void FixedUpdate()
     {
-        //if (_currentAnimationState == STATE_IDLE)
-        //{
-        animator.SetInteger("state", STATE_WALK);
-        changeState(STATE_WALK);
-        //}
- 
+        if (Input.GetKey("d") || Input.GetKey("a"))
+        {
+            animator.SetInteger("state", STATE_WALK);
+            changeState(STATE_WALK);
+        }
+        else if (Input.GetKey("space"))
+        {
+            animator.SetInteger("state", STATE_JUMP);
+            changeState(STATE_JUMP);
+        }
+        else
+        {
+                changeState(STATE_IDLE);
+        }
+
     }
     void changeState(int state)
     {
